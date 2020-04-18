@@ -4,8 +4,8 @@
 
 ## › CodeForces
 
-- [x] [Problem 1A: Theatre Square](http://codeforces.com/problemset/problem/1/A)
-- [x] [Problem 1B: Spreadsheets](http://codeforces.com/problemset/problem/1/B)
+- [x] [Problem 1A: Theatre Square](https://codeforces.com/problemset/problem/1/A)
+- [x] [Problem 1B: Spreadsheets](https://codeforces.com/problemset/problem/1/B)
 
 ## › Euler
 
@@ -45,4 +45,4 @@
 
 ## › UVa
 
-- [x] [Problem 100: The 3n + 1 problem](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=36)
+- [x] [Problem 100: The 3n + 1 problem](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=36)
