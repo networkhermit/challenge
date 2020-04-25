@@ -5,10 +5,10 @@
     ((> i n))
     (setf divisible nil)
 
-    (when (= (rem i 3) 0)
+    (when (zerop (rem i 3))
       (write-string "Fizz")
       (setf divisible t))
-    (when (= (rem i 5) 0)
+    (when (zerop (rem i 5))
       (write-string "Buzz")
       (setf divisible t))
     (when (not divisible)
