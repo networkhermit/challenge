@@ -1,7 +1,7 @@
 (defun fizz-buzz (n)
-  (do ((divisible nil)
+  (do (divisible
 
-       (i 1 (incf i)))
+       (i 1 (1+ i)))
     ((> i n))
     (setf divisible nil)
 
