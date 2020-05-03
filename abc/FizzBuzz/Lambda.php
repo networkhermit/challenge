@@ -1,27 +1,24 @@
 <?php
-    function fizzBuzz(int $n): void {
-        $divisible = false;
+    function fizzBuzz(int $n): string {
+        $word = "";
 
-        for ($i = 1; $i <= $n; $i++) {
-            $divisible = false;
-
-            if ($i % 3 == 0) {
-                print("Fizz");
-                $divisible = true;
-            }
-            if ($i % 5 == 0) {
-                print("Buzz");
-                $divisible = true;
-            }
-            if (!$divisible) {
-                print($i);
-            }
-
-            print("\n");
+        if ($n % 3 == 0) {
+            $word .= "Fizz";
         }
+        if ($n % 5 == 0) {
+            $word .= "Buzz";
+        }
+
+        if (strlen($word) == 0) {
+            $word = (string) $n;
+        }
+
+        return $word;
     }
 
     if (count(debug_backtrace()) == 0) {
-        fizzBuzz(100);
+        for ($i = 1; $i <= 100; $i++) {
+            printf("%s\n", fizzBuzz($i));
+        }
     }
 ?>

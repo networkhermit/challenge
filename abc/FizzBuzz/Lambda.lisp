@@ -1,20 +1,17 @@
 (defun fizz-buzz (n)
-  (do (divisible
+  (let ((word ""))
 
-       (i 1 (1+ i)))
-    ((> i n))
-    (setf divisible nil)
+    (when (zerop (rem n 3))
+      (setf word (concatenate 'string word "Fizz")))
+    (when (zerop (rem n 5))
+      (setf word (concatenate 'string word "Buzz")))
 
-    (when (zerop (rem i 3))
-      (write-string "Fizz")
-      (setf divisible t))
-    (when (zerop (rem i 5))
-      (write-string "Buzz")
-      (setf divisible t))
-    (when (not divisible)
-      (write i))
+    (when (zerop (length word))
+      (setf word (write-to-string n)))
 
-    (terpri)))
+    word))
 
 (defun main ()
-  (fizz-buzz 100))
+  (do ((i 1 (1+ i)))
+    ((> i 100))
+    (write-line (fizz-buzz i))))

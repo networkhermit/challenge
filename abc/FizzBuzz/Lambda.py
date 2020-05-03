@@ -1,19 +1,16 @@
-def fizzBuzz(n: int) -> None:
-    divisible = False
+def fizzBuzz(n: int) -> str:
+    word = ""
 
-    for i in range(1, n + 1):
-        divisible = False
+    if n % 3 == 0:
+        word += "Fizz"
+    if n % 5 == 0:
+        word += "Buzz"
 
-        if i % 3 == 0:
-            print("Fizz", end = '')
-            divisible = True
-        if i % 5 == 0:
-            print("Buzz", end = '')
-            divisible = True
-        if not divisible:
-            print(i, end = '')
+    if len(word) == 0:
+        word = str(n)
 
-        print()
+    return word
 
 if __name__ == "__main__":
-    fizzBuzz(100)
+    for i in range(1, 101):
+        print(fizzBuzz(i))

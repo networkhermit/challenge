@@ -1,29 +1,29 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "strconv"
+)
 
-func fizzBuzz(n int) {
-    var divisible bool
+func fizzBuzz(n int) string {
+    var word string
 
-    for i := 1; i <= n; i++ {
-        divisible = false
-
-        if i % 3 == 0 {
-            fmt.Print("Fizz")
-            divisible = true
-        }
-        if i % 5 == 0 {
-            fmt.Print("Buzz")
-            divisible = true
-        }
-        if !divisible {
-            fmt.Print(i)
-        }
-
-        fmt.Println()
+    if n % 3 == 0 {
+        word += "Fizz"
     }
+    if n % 5 == 0 {
+        word += "Buzz"
+    }
+
+    if len(word) == 0 {
+        word = strconv.Itoa(n)
+    }
+
+    return word
 }
 
 func main() {
-    fizzBuzz(100)
+    for i := 1; i <= 100; i++ {
+        fmt.Println(fizzBuzz(i))
+    }
 }

@@ -1,28 +1,32 @@
-#include <stdbool.h>
+#include <limits.h>
+#include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-void fizzBuzz(int n) {
-    bool divisible;
+const char* fizzBuzz(int n) {
+    const int MAX_DIGIT = (int) log10(INT_MAX) + 1;
+    const int MAX_ALPHA = strlen("FizzBuzz");
+    const int MAX_LENGTH = MAX_DIGIT > MAX_ALPHA ? MAX_DIGIT : MAX_ALPHA;
 
-    for (int i = 1; i <= n; i++) {
-        divisible = false;
+    char* word = (char *) calloc(MAX_LENGTH, sizeof(char));
 
-        if (i % 3 == 0) {
-            printf("%s", "Fizz");
-            divisible = true;
-        }
-        if (i % 5 == 0) {
-            printf("%s", "Buzz");
-            divisible = true;
-        }
-        if (!divisible) {
-            printf("%d", i);
-        }
-
-        putchar('\n');
+    if (n % 3 == 0) {
+        strcat(word, "Fizz");
     }
+    if (n % 5 == 0) {
+        strcat(word, "Buzz");
+    }
+
+    if (word[0] == '\0') {
+        sprintf(word, "%d", n);
+    }
+
+    return word;
 }
 
 int main(void) {
-    fizzBuzz(100);
+    for (int i = 1; i <= 100; i++) {
+        printf("%s\n", fizzBuzz(i));
+    }
 }

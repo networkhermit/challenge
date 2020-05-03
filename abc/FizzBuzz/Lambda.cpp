@@ -2,28 +2,25 @@
 
 using namespace std;
 
-void fizzBuzz(int n) {
-    bool divisible;
+string fizzBuzz(int n) {
+    string word;
 
-    for (int i = 1; i <= n; i++) {
-        divisible = false;
-
-        if (i % 3 == 0) {
-            cout << "Fizz";
-            divisible = true;
-        }
-        if (i % 5 == 0) {
-            cout << "Buzz";
-            divisible = true;
-        }
-        if (!divisible) {
-            cout << i;
-        }
-
-        cout << endl;
+    if (n % 3 == 0) {
+        word += "Fizz";
     }
+    if (n % 5 == 0) {
+        word += "Buzz";
+    }
+
+    if (word.empty()) {
+        word = to_string(n);
+    }
+
+    return word;
 }
 
 int main() {
-    fizzBuzz(100);
+    for (int i = 1; i <= 100; i++) {
+        cout << fizzBuzz(i) << endl;
+    }
 }

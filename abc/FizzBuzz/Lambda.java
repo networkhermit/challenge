@@ -1,28 +1,25 @@
 public class Lambda {
 
-    public static void fizzBuzz(int n) {
-        boolean divisible;
+    public static String fizzBuzz(int n) {
+        String word = new String();
 
-        for (int i = 1; i <= n; i++) {
-            divisible = false;
-
-            if (i % 3 == 0) {
-                System.out.print("Fizz");
-                divisible = true;
-            }
-            if (i % 5 == 0) {
-                System.out.print("Buzz");
-                divisible = true;
-            }
-            if (!divisible) {
-                System.out.print(i);
-            }
-
-            System.out.println();
+        if (n % 3 == 0) {
+            word += "Fizz";
         }
+        if (n % 5 == 0) {
+            word += "Buzz";
+        }
+
+        if (word.isEmpty()) {
+            word = String.valueOf(n);
+        }
+
+        return word;
     }
 
     public static void main(String[] args) {
-        fizzBuzz(100);
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(fizzBuzz(i));
+        }
     }
 }
