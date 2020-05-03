@@ -75,7 +75,7 @@ void process(int m, int n) {
         }
     }
 
-    for (int i = 0, length = sizeof(nums) / sizeof(nums[0]); i < length; i++) {
+    for (int i = 0, length = *(&nums + 1) - nums; i < length; i++) {
         if (!nums[i]) {
             cout << m + (i << 1) << endl;
         }

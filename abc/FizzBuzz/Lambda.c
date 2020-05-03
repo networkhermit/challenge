@@ -4,12 +4,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-const char* fizzBuzz(int n) {
+const char *fizzBuzz(int n) {
     const int MAX_DIGIT = (int) log10(INT_MAX) + 1;
     const int MAX_ALPHA = strlen("FizzBuzz");
     const int MAX_LENGTH = MAX_DIGIT > MAX_ALPHA ? MAX_DIGIT : MAX_ALPHA;
 
-    char* word = (char *) calloc(MAX_LENGTH, sizeof(char));
+    char *word = (char *) calloc(MAX_LENGTH, sizeof(char));
 
     if (n % 3 == 0) {
         strcat(word, "Fizz");

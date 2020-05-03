@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-bool * bruteForce(int n) {
+bool *bruteForce(int n) {
     bool *arr = (bool *) malloc(n * sizeof(bool));
 
     memset(arr, false, n);
@@ -22,7 +22,7 @@ bool * bruteForce(int n) {
     return arr;
 }
 
-bool * process(int n) {
+bool *process(int n) {
     bool *arr = (bool *) malloc(n * sizeof(bool));
 
     int temp;
