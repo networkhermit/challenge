@@ -15,7 +15,7 @@ func process(coordinate string) {
     k := 1
     if rune(coordinate[0]) == 'R' && !unicode.IsLetter(rune(coordinate[1])) {
         for k < length && unicode.IsNumber(rune(coordinate[k])) {
-            k += 1
+            k++
         }
     }
 
@@ -23,11 +23,11 @@ func process(coordinate string) {
         k = 0
         for unicode.IsLetter(rune(coordinate[k])) {
             column = column * 26 + int(coordinate[k] - 64)
-            k += 1
+            k++
         }
         for k < length {
             row = row * 10 + int(coordinate[k] - 48)
-            k += 1
+            k++
         }
 
         fmt.Printf("R%dC%d\n", row, column)
@@ -35,12 +35,12 @@ func process(coordinate string) {
         k = 1
         for unicode.IsNumber(rune(coordinate[k])) {
             row = row * 10 + int(coordinate[k] - 48)
-            k += 1
+            k++
         }
-        k += 1
+        k++
         for k < length {
             column = column * 10 + int(coordinate[k] - 48)
-            k += 1
+            k++
         }
 
         s := make([]string, 0)
@@ -51,7 +51,7 @@ func process(coordinate string) {
             column = column / 26
             if r == 0 {
                 s = append(s, "Z")
-                column -= 1
+                column--
             } else {
                 s = append(s, string(r + 64))
             }

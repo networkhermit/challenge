@@ -5,9 +5,9 @@
 #include <string.h>
 
 const char *fizzBuzz(int n) {
-    const int MAX_DIGIT = (int) log10(INT_MAX) + 1;
-    const int MAX_ALPHA = strlen("FizzBuzz");
-    const int MAX_LENGTH = MAX_DIGIT > MAX_ALPHA ? MAX_DIGIT : MAX_ALPHA;
+    const size_t MAX_DIGIT = (size_t) log10(INT_MAX) + 1;
+    const size_t MAX_ALPHA = strlen("FizzBuzz");
+    const size_t MAX_LENGTH = MAX_DIGIT > MAX_ALPHA ? MAX_DIGIT : MAX_ALPHA;
 
     char *word = (char *) calloc(MAX_LENGTH, sizeof(char));
 
@@ -19,7 +19,7 @@ const char *fizzBuzz(int n) {
     }
 
     if (word[0] == '\0') {
-        sprintf(word, "%d", n);
+        snprintf(word, MAX_DIGIT + 1, "%d", n);
     }
 
     return word;

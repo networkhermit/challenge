@@ -32,7 +32,7 @@ int draft(int n) {
         }
         if (isPrime) {
             primes[k] = i;
-            k += 1;
+            k++;
             if (k == n) {
                 break;
             }
@@ -75,7 +75,7 @@ int process(int n) {
     int k = 1;
     for (int i = 1; i < size; i++) {
         if (!arr[i]) {
-            k += 1;
+            k++;
             if (k == n) {
                 return (i << 1) + 1;
             }

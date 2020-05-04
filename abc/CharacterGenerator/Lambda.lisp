@@ -2,7 +2,6 @@
   (defconstant +first-glyph+ 33) ; '!'
   (defconstant +last-glyph+ 126) ; '~'
   (defconstant +glyphs-per-line+ 72)
-  (defconstant +glyph-total+ (- +last-glyph+ (1- +first-glyph+)))
 
   (do ((cursor +first-glyph+)
 

@@ -14,7 +14,7 @@ void process(string coordinate) {
     int k = 1;
     if (coordinate[0] == 'R' && !isalpha(coordinate[k])) {
         while (k < length && isdigit(coordinate[k])) {
-            k += 1;
+            k++;
         }
     }
 
@@ -22,11 +22,11 @@ void process(string coordinate) {
         k = 0;
         while (isalpha(coordinate[k])) {
             column = column * 26 + (static_cast<int>(coordinate[k]) - 64);
-            k += 1;
+            k++;
         }
         while (k < length) {
             row = row * 10 + (static_cast<int>(coordinate[k]) - 48);
-            k += 1;
+            k++;
         }
 
         cout << "R" << row << "C" << column << endl;
@@ -34,12 +34,12 @@ void process(string coordinate) {
         k = 1;
         while (isdigit(coordinate[k])) {
             row = row * 10 + (static_cast<int>(coordinate[k]) - 48);
-            k += 1;
+            k++;
         }
-        k += 1;
+        k++;
         while (k < length) {
             column = column * 10 + (static_cast<int>(coordinate[k]) - 48);
-            k += 1;
+            k++;
         }
 
         stack<char> s;
@@ -50,7 +50,7 @@ void process(string coordinate) {
             column = column / 26;
             if (r == 0) {
                 s.push('Z');
-                column -= 1;
+                column--;
             } else {
                 s.push(static_cast<char>(r + 64));
             }

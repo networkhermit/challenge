@@ -34,7 +34,7 @@ func draft(n int) int {
         }
         if isPrime {
             primes[k] = i
-            k += 1
+            k++
             if k == n {
                 break
             }
@@ -76,7 +76,7 @@ func process(n int) int {
     k := 1
     for i := 1; i < size; i++ {
         if !arr[i] {
-            k += 1
+            k++
             if k == n {
                 return (i << 1) + 1
             }

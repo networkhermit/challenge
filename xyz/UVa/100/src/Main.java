@@ -15,7 +15,7 @@ public class Main {
             n = i;
 
             while (true) {
-                cycleLength += 1;
+                cycleLength++;
                 if (n == 1) {
                     if (cycleLength > maxCycleLength) {
                         maxCycleLength = cycleLength;

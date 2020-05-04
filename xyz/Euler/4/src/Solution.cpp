@@ -9,7 +9,7 @@ bool draft(int n) {
     while (n != 0) {
         arr[k] = n % 10;
         n /= 10;
-        k += 1;
+        k++;
     }
 
     for (int i = 0, j = k - 1, bound = (k >> 1) + 1; i < bound; i++, j--) {

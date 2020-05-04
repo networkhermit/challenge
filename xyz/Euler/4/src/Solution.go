@@ -12,7 +12,7 @@ func draft(n int) bool {
     for n != 0 {
         arr[k] = n % 10
         n /= 10
-        k += 1
+        k++
     }
 
     for i, j, bound := 0, k - 1, (k >> 1) + 1; i < bound; i, j = i + 1, j - 1 {

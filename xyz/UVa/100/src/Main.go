@@ -18,7 +18,7 @@ func process(left int, right int) int {
         n = i
 
         for {
-            cycleLength += 1
+            cycleLength++
             if n == 1 {
                 if cycleLength > maxCycleLength {
                     maxCycleLength = cycleLength

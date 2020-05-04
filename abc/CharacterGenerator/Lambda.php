@@ -14,14 +14,14 @@
                 if ($i == $LAST_GLYPH) {
                     $i = $FIRST_GLYPH;
                 } else {
-                    $i += 1;
+                    $i++;
                 }
             }
             print("\n");
             if ($cursor == $LAST_GLYPH) {
                 $cursor = $FIRST_GLYPH;
             } else {
-                $cursor += 1;
+                $cursor++;
             }
         }
     }

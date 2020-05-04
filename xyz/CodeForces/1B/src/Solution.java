@@ -12,7 +12,7 @@ public class Solution {
         int k = 1;
         if (coordinate.charAt(0) == 'R' && !Character.isLetter(coordinate.charAt(k))) {
             while (k < length && Character.isDigit(coordinate.charAt(k))) {
-                k += 1;
+                k++;
             }
         }
 
@@ -20,11 +20,11 @@ public class Solution {
             k = 0;
             while (Character.isLetter(coordinate.charAt(k))) {
                 column = column * 26 + ((int) coordinate.charAt(k) - 64);
-                k += 1;
+                k++;
             }
             while (k < length) {
                 row = row * 10 + ((int) coordinate.charAt(k) - 48);
-                k += 1;
+                k++;
             }
 
             System.out.printf("R%dC%d\n", row, column);
@@ -32,12 +32,12 @@ public class Solution {
             k = 1;
             while (Character.isDigit(coordinate.charAt(k))) {
                 row = row * 10 + ((int) coordinate.charAt(k) - 48);
-                k += 1;
+                k++;
             }
-            k += 1;
+            k++;
             while (k < length) {
                 column = column * 10 + ((int) coordinate.charAt(k) - 48);
-                k += 1;
+                k++;
             }
 
             Stack<Character> s = new Stack<>();
@@ -48,7 +48,7 @@ public class Solution {
                 column = column / 26;
                 if (r == 0) {
                     s.push('Z');
-                    column -= 1;
+                    column--;
                 } else {
                     s.push((char) (r + 64));
                 }

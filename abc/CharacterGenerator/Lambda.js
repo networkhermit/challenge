@@ -15,14 +15,14 @@ if (module === require.main) {
             if (i === LAST_GLYPH) {
                 i = FIRST_GLYPH
             } else {
-                i += 1
+                i++
             }
         }
         console.log()
         if (cursor === LAST_GLYPH) {
             cursor = FIRST_GLYPH
         } else {
-            cursor += 1
+            cursor++
         }
     }
 }
