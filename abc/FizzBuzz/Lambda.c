@@ -5,17 +5,17 @@
 #include <string.h>
 
 const char *fizzBuzz(int n) {
-    const size_t MAX_DIGIT = (size_t) log10(INT_MAX) + 1;
+    const size_t MAX_DIGIT = (size_t) log10((double) INT_MAX) + 1;
     const size_t MAX_ALPHA = strlen("FizzBuzz");
     const size_t MAX_LENGTH = MAX_DIGIT > MAX_ALPHA ? MAX_DIGIT : MAX_ALPHA;
 
     char *word = (char *) calloc(MAX_LENGTH, sizeof(char));
 
     if (n % 3 == 0) {
-        strcat(word, "Fizz");
+        strncat(word, "Fizz", strlen("Fizz") + 1);
     }
     if (n % 5 == 0) {
-        strcat(word, "Buzz");
+        strncat(word, "Buzz", strlen("Buzz") + 1);
     }
 
     if (word[0] == '\0') {
