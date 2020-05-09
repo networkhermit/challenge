@@ -4,7 +4,7 @@ using namespace std;
 
 bool draft(int n) {
     int k = 0;
-    int arr[10];
+    int arr[10] = {0};
 
     while (n != 0) {
         arr[k] = n % 10;

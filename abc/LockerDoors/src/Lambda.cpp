@@ -6,7 +6,7 @@
 using namespace std;
 
 vector<bool> bruteForce(int n) {
-    vector<bool> arr (n);
+    vector<bool> arr(n);
 
     fill(arr.begin(), arr.end(), false);
 
@@ -24,7 +24,7 @@ vector<bool> bruteForce(int n) {
 }
 
 vector<bool> process(int n) {
-    vector<bool> arr (n);
+    vector<bool> arr(n);
 
     int temp;
     for (int i = 1; i <= n; i++) {

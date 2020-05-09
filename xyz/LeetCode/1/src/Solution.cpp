@@ -4,7 +4,7 @@
 using namespace std;
 
 vector<int> twoSum(vector<int> &nums, int target) {
-    vector<int> indices (2);
+    vector<int> indices(2);
 
     for (int i = 0, length = nums.size(); i < length; i++) {
         for (int j = i + 1; j < length; j++) {
