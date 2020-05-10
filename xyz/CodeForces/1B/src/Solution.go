@@ -48,7 +48,7 @@ func process(coordinate string) {
         var r int
         for column != 0 {
             r = column % 26
-            column = column / 26
+            column /= 26
             if r == 0 {
                 s = append(s, "Z")
                 column--

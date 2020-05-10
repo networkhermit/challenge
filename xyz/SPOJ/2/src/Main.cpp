@@ -18,7 +18,7 @@ void process(int m, int n) {
         return;
     }
 
-    m = m | 1;
+    m |= 1;
     n = (n - 1) | 1;
 
     int cache = static_cast<int>(sqrt(static_cast<double>(n)));

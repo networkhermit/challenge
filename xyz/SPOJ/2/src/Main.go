@@ -20,7 +20,7 @@ func process(m int, n int) {
         return
     }
 
-    m = m | 1
+    m |= 1
     n = (n - 1) | 1
 
     cache := int(math.Sqrt(float64(n)))

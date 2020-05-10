@@ -47,7 +47,7 @@ void process(string coordinate) {
         int r;
         while (column != 0) {
             r = column % 26;
-            column = column / 26;
+            column /= 26;
             if (r == 0) {
                 s.push('Z');
                 column--;

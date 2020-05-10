@@ -16,7 +16,7 @@ public class Main {
             return;
         }
 
-        m = m | 1;
+        m |= 1;
         n = (n - 1) | 1;
 
         int cache = (int) Math.sqrt((double) n);
