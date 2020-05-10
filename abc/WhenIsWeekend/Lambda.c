@@ -8,19 +8,19 @@ int main(void) {
     int today = localtime(&t)->tm_wday;
 
     switch (today) {
-        case 0:
-            puts("Today.");
-            break;
-        case 6:
-            puts("Today.");
-            break;
-        case 5:
-            puts("Tomorrow.");
-            break;
-        case 4:
-            puts("In two days.");
-            break;
-        default:
-            puts("Too far away.");
+    case 0:
+        puts("Today.");
+        break;
+    case 6:
+        puts("Today.");
+        break;
+    case 5:
+        puts("Tomorrow.");
+        break;
+    case 4:
+        puts("In two days.");
+        break;
+    default:
+        puts("Too far away.");
     }
 }

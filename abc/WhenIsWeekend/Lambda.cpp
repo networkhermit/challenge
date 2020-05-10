@@ -10,19 +10,19 @@ int main() {
     int today = localtime(&t)->tm_wday;
 
     switch (today) {
-        case 0:
-            cout << "Today." << endl;
-            break;
-        case 6:
-            cout << "Today." << endl;
-            break;
-        case 5:
-            cout << "Tomorrow." << endl;
-            break;
-        case 4:
-            cout << "In two days." << endl;
-            break;
-        default:
-            cout << "Too far away." << endl;
+    case 0:
+        cout << "Today." << endl;
+        break;
+    case 6:
+        cout << "Today." << endl;
+        break;
+    case 5:
+        cout << "Tomorrow." << endl;
+        break;
+    case 4:
+        cout << "In two days." << endl;
+        break;
+    default:
+        cout << "Too far away." << endl;
     }
 }
