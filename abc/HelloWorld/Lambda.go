@@ -5,7 +5,7 @@
 *   Organization: STEM
 *   LICENCE:      MIT
 *   Copyright:    2014-2018
-*/
+ */
 
 package main
 
