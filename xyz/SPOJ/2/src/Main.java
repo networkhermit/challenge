@@ -79,22 +79,22 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int testCases;
 
-        int testCases;
+            int m;
+            int n;
 
-        int m;
-        int n;
-
-        while (input.hasNext()) {
-            testCases = input.nextInt();
-            for (int i = 0; i < testCases; i++) {
-                m = input.nextInt();
-                n = input.nextInt();
-                if (i != 0) {
-                    System.out.println();
+            while (input.hasNext()) {
+                testCases = input.nextInt();
+                for (int i = 0; i < testCases; i++) {
+                    m = input.nextInt();
+                    n = input.nextInt();
+                    if (i != 0) {
+                        System.out.println();
+                    }
+                    process(m, n);
                 }
-                process(m, n);
             }
         }
     }

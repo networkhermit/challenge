@@ -20,17 +20,17 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int testCases;
 
-        int testCases;
+            long sentinel;
 
-        long sentinel;
-
-        while (input.hasNext()) {
-            testCases = input.nextInt();
-            for (int i = 0; i < testCases; i++) {
-                sentinel = input.nextLong();
-                System.out.println(process(sentinel));
+            while (input.hasNext()) {
+                testCases = input.nextInt();
+                for (int i = 0; i < testCases; i++) {
+                    sentinel = input.nextLong();
+                    System.out.println(process(sentinel));
+                }
             }
         }
     }

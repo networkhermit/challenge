@@ -39,7 +39,7 @@ public class Lambda {
 
         for (int i = 0; i < N; i++) {
             if (arr[i]) {
-                System.out.printf("%d\t  OPEN\n", i + 1);
+                System.out.printf("%d\t  OPEN%n", i + 1);
             }
         }
     }

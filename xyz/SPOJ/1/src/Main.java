@@ -3,16 +3,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int n;
 
-        int n;
-
-        while (input.hasNext()) {
-            n = input.nextInt();
-            if (n == 42) {
-                break;
+            while (input.hasNext()) {
+                n = input.nextInt();
+                if (n == 42) {
+                    break;
+                }
+                System.out.println(n);
             }
-            System.out.println(n);
         }
     }
 }

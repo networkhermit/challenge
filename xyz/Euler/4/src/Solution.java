@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Solution {
 
-    private static boolean draft(int n) {
+    public static boolean draft(int n) {
         int k = 0;
         int[] arr = new int[10];
 
@@ -21,7 +21,7 @@ public class Solution {
         return true;
     }
 
-    private static boolean isPalindrome(int n) {
+    public static boolean isPalindrome(int n) {
         int original = n;
 
         int reversed = 0;
@@ -33,7 +33,7 @@ public class Solution {
         return original == reversed;
     }
 
-    private static boolean exhaustiveMatch(int n) {
+    public static boolean exhaustiveMatch(int n) {
         int product;
 
         for (int i = 999; i > 99; i--) {
@@ -60,17 +60,17 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int testCases;
 
-        int testCases;
+            int sentinel;
 
-        int sentinel;
-
-        while (input.hasNext()) {
-            testCases = input.nextInt();
-            for (int i = 0; i < testCases; i++) {
-                sentinel = input.nextInt();
-                System.out.println(process(sentinel));
+            while (input.hasNext()) {
+                testCases = input.nextInt();
+                for (int i = 0; i < testCases; i++) {
+                    sentinel = input.nextInt();
+                    System.out.println(process(sentinel));
+                }
             }
         }
     }

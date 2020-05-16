@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int a;
+            int b;
 
-        int a;
-        int b;
-
-        while (input.hasNext()) {
-            a = input.nextInt();
-            b = input.nextInt();
-            System.out.println(a + b);
+            while (input.hasNext()) {
+                a = input.nextInt();
+                b = input.nextInt();
+                System.out.println(a + b);
+            }
         }
     }
 }

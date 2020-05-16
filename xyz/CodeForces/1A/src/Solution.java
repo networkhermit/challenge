@@ -10,17 +10,17 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int n;
+            int m;
+            int a;
 
-        int n;
-        int m;
-        int a;
-
-        while (input.hasNext()) {
-            n = input.nextInt();
-            m = input.nextInt();
-            a = input.nextInt();
-            System.out.println(process(n, m, a));
+            while (input.hasNext()) {
+                n = input.nextInt();
+                m = input.nextInt();
+                a = input.nextInt();
+                System.out.println(process(n, m, a));
+            }
         }
     }
 }

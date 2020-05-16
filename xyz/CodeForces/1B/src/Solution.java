@@ -27,7 +27,7 @@ public class Solution {
                 k++;
             }
 
-            System.out.printf("R%dC%d\n", row, column);
+            System.out.printf("R%dC%d%n", row, column);
         } else {
             k = 1;
             while (Character.isDigit(coordinate.charAt(k))) {
@@ -63,17 +63,17 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int testCases;
 
-        int testCases;
+            String coordinate;
 
-        String coordinate;
-
-        while (input.hasNext()) {
-            testCases = input.nextInt();
-            for (int i = 0; i < testCases; i++) {
-                coordinate = input.next();
-                process(coordinate);
+            while (input.hasNext()) {
+                testCases = input.nextInt();
+                for (int i = 0; i < testCases; i++) {
+                    coordinate = input.next();
+                    process(coordinate);
+                }
             }
         }
     }

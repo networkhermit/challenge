@@ -34,18 +34,18 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int m;
+            int n;
 
-        int m;
-        int n;
-
-        while (input.hasNext()) {
-            m = input.nextInt();
-            n = input.nextInt();
-            if (m < n) {
-                System.out.printf("%d %d %d\n", m, n, process(m, n));
-            } else {
-                System.out.printf("%d %d %d\n", m, n, process(n, m));
+            while (input.hasNext()) {
+                m = input.nextInt();
+                n = input.nextInt();
+                if (m < n) {
+                    System.out.printf("%d %d %d%n", m, n, process(m, n));
+                } else {
+                    System.out.printf("%d %d %d%n", m, n, process(n, m));
+                }
             }
         }
     }

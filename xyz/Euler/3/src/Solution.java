@@ -28,17 +28,17 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int testCases;
 
-        int testCases;
+            long n;
 
-        long n;
-
-        while (input.hasNext()) {
-            testCases = input.nextInt();
-            for (int i = 0; i < testCases; i++) {
-                n = input.nextLong();
-                System.out.println(process(n));
+            while (input.hasNext()) {
+                testCases = input.nextInt();
+                for (int i = 0; i < testCases; i++) {
+                    n = input.nextLong();
+                    System.out.println(process(n));
+                }
             }
         }
     }

@@ -1,7 +1,7 @@
 public class Lambda {
 
     public static String fizzBuzz(int n) {
-        String word = new String();
+        String word = "";
 
         if (n % 3 == 0) {
             word += "Fizz";

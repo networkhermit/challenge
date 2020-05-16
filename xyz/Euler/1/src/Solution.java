@@ -12,7 +12,7 @@ public class Solution {
         return sum;
     }
 
-    private static long arithmeticSeries(int sentinel, int unit) {
+    public static long arithmeticSeries(int sentinel, int unit) {
         long n = (long) ((sentinel - 1) / unit);
 
         return (long) unit * (n * (1 + n) >>> 1);
@@ -29,17 +29,17 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in, "UTF-8")) {
+            int testCases;
 
-        int testCases;
+            int sentinel;
 
-        int sentinel;
-
-        while (input.hasNext()) {
-            testCases = input.nextInt();
-            for (int i = 0; i < testCases; i++) {
-                sentinel = input.nextInt();
-                System.out.println(process(sentinel));
+            while (input.hasNext()) {
+                testCases = input.nextInt();
+                for (int i = 0; i < testCases; i++) {
+                    sentinel = input.nextInt();
+                    System.out.println(process(sentinel));
+                }
             }
         }
     }
