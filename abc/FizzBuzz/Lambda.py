@@ -11,6 +11,9 @@ def fizzBuzz(n: int) -> str:
 
     return word
 
-if __name__ == "__main__":
+def main() -> None:
     for i in range(1, 101):
         print(fizzBuzz(i))
+
+if __name__ == "__main__":
+    main()

@@ -13,6 +13,9 @@ def sayHello() -> None:
     print("hello, world")
 
 # entry point of the program
-if __name__ == "__main__":
+def main() -> None:
     # function invocation
     sayHello()
+
+if __name__ == "__main__":
+    main()

@@ -25,7 +25,7 @@ def process(n: int) -> list:
 
     return arr
 
-if __name__ == "__main__":
+def main() -> None:
     N = 100
 
     arr = process(N)
@@ -33,3 +33,6 @@ if __name__ == "__main__":
     for i, v in enumerate(arr):
         if v:
             print("%d\t  OPEN" % (i + 1))
+
+if __name__ == "__main__":
+    main()

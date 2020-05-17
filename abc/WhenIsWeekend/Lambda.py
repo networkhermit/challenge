@@ -1,6 +1,6 @@
 import time
 
-if __name__ == "__main__":
+def main() -> None:
     print("When’s Weekend?")
 
     today = time.localtime().tm_wday
@@ -15,3 +15,6 @@ if __name__ == "__main__":
         print("In two days.")
     else:
         print("Too far away.")
+
+if __name__ == "__main__":
+    main()
