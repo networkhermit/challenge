@@ -7,11 +7,7 @@ const bruteForce = (n) => {
 
     for (let i = 1; i <= n; i++) {
         for (let j = i - 1; j < n; j += i) {
-            if (arr[j]) {
-                arr[j] = false
-            } else {
-                arr[j] = true
-            }
+            arr[j] = !arr[j]
         }
     }
 
@@ -24,11 +20,7 @@ const process = (n) => {
     let temp = 0
     for (let i = 1; i <= n; i++) {
         temp = Math.floor(Math.sqrt(i))
-        if (temp * temp === i) {
-            arr[i - 1] = true
-        } else {
-            arr[i - 1] = false
-        }
+        arr[i - 1] = temp * temp === i
     }
 
     return arr

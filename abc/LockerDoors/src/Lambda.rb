@@ -4,11 +4,7 @@ def bruteForce(n)
     for i in 1 ... n + 1
         j = i - 1
         while j < n
-            if arr[j]
-                arr[j] = false
-            else
-                arr[j] = true
-            end
+            arr[j] = !arr[j]
             j += i
         end
     end
@@ -22,11 +18,7 @@ def process(n)
     temp = 0
     for i in 1 ... n + 1
         temp = Math.sqrt(i.to_f()).to_i()
-        if temp * temp == i
-            arr[i - 1] = true
-        else
-            arr[i - 1] = false
-        end
+        arr[i - 1] = temp * temp == i
     end
 
     return arr

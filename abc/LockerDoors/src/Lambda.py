@@ -5,10 +5,7 @@ def bruteForce(n: int) -> list:
 
     for i in range(1, n + 1):
         for j in range(i - 1, n, i):
-            if arr[j]:
-                arr[j] = False
-            else:
-                arr[j] = True
+            arr[j] = not arr[j]
 
     return arr
 
@@ -18,10 +15,7 @@ def process(n: int) -> list:
     temp = 0
     for i in range(1, n + 1):
         temp = int(math.sqrt(float(i)))
-        if temp * temp == i:
-            arr[i - 1] = True
-        else:
-            arr[i - 1] = False
+        arr[i - 1] = temp * temp == i
 
     return arr
 

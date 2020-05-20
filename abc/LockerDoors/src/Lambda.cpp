@@ -12,11 +12,7 @@ vector<bool> bruteForce(int n) {
 
     for (int i = 1; i <= n; i++) {
         for (int j = i - 1; j < n; j += i) {
-            if (arr[j]) {
-                arr[j] = false;
-            } else {
-                arr[j] = true;
-            }
+            arr[j] = !arr[j];
         }
     }
 
@@ -29,11 +25,7 @@ vector<bool> process(int n) {
     int temp;
     for (int i = 1; i <= n; i++) {
         temp = static_cast<int>(sqrt(static_cast<double>(i)));
-        if (temp * temp == i) {
-            arr[i - 1] = true;
-        } else {
-            arr[i - 1] = false;
-        }
+        arr[i - 1] = temp * temp == i;
     }
 
     return arr;
