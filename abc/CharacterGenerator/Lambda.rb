@@ -1,4 +1,4 @@
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
     FIRST_GLYPH = 33 # '!'
     LAST_GLYPH = 126 # '~'
     GLYPHS_PER_LINE = 72
@@ -6,9 +6,9 @@ if __FILE__ == $0
     cursor = FIRST_GLYPH
 
     i = 0
-    while true
+    loop do
         i = cursor
-        (0 ... GLYPHS_PER_LINE).each do |j|
+        (0 ... GLYPHS_PER_LINE).each do
             putc(i)
             if i > LAST_GLYPH
                 i = FIRST_GLYPH

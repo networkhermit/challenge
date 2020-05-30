@@ -1,7 +1,7 @@
 def bruteForce(n)
     arr = Array.new(n, false)
 
-    for i in 1 ... n + 1
+    (1 ... n + 1).each do |i|
         j = i - 1
         while j < n
             arr[j] = !arr[j]
@@ -9,29 +9,29 @@ def bruteForce(n)
         end
     end
 
-    return arr
+    arr
 end
 
 def process(n)
     arr = Array.new(n)
 
     temp = 0
-    for i in 1 ... n + 1
+    (1 ... n + 1).each do |i|
         temp = Math.sqrt(i.to_f()).to_i()
         arr[i - 1] = temp * temp == i
     end
 
-    return arr
+    arr
 end
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
     N = 100
 
     arr = process(N)
 
     arr.each_index do |i|
         if arr[i]
-            puts("%d\t  OPEN" % (i + 1))
+            puts(format("%d\t  OPEN", i + 1))
         end
     end
 end

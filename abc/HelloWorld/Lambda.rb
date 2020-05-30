@@ -14,7 +14,7 @@ def sayHello()
 end
 
 # entry point of the program
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
     # function invocation
     sayHello()
 end

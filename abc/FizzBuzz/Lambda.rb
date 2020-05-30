@@ -1,22 +1,22 @@
 def fizzBuzz(n)
     word = ""
 
-    if n % 3 == 0
+    if (n % 3).zero?
         word += "Fizz"
     end
-    if n % 5 == 0
+    if (n % 5).zero?
         word += "Buzz"
     end
 
-    if word.length == 0
+    if word.empty?
         word = n.to_s()
     end
 
-    return word
+    word
 end
 
-if __FILE__ == $0
-    for i in 1 .. 100
+if __FILE__ == $PROGRAM_NAME
+    (1 .. 100).each do |i|
         puts(fizzBuzz(i))
     end
 end
