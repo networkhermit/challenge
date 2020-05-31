@@ -8,7 +8,7 @@ if __FILE__ == $PROGRAM_NAME
     i = 0
     loop do
         i = cursor
-        (0 ... GLYPHS_PER_LINE).each do
+        GLYPHS_PER_LINE.times do
             putc(i)
             if i > LAST_GLYPH
                 i = FIRST_GLYPH

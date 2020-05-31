@@ -1,11 +1,9 @@
 def bruteForce(n)
     arr = Array.new(n, false)
 
-    (1 ... n + 1).each do |i|
-        j = i - 1
-        while j < n
+    1.upto(n) do |i|
+        (i - 1).step(n - 1, i) do |j|
             arr[j] = !arr[j]
-            j += i
         end
     end
 
@@ -16,7 +14,7 @@ def process(n)
     arr = Array.new(n)
 
     temp = 0
-    (1 ... n + 1).each do |i|
+    1.upto(n) do |i|
         temp = Math.sqrt(i.to_f()).to_i()
         arr[i - 1] = temp * temp == i
     end
